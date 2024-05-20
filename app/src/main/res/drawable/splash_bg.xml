@@ -10,7 +10,7 @@
         android:height="245dp"
         android:gravity="center">
 
-        <bitmap android:src="@drawable/splash_logo"/>
+        <bitmap android:src="@drawable/ic_logo_splash"/>
 
     </item>
 
