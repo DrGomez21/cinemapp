@@ -7,12 +7,8 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cinesapp.databinding.ActivityMainBinding
-import com.example.cinesapp.modelos.DescripcionPelicula
-import com.example.cinesapp.modelos.DetallePelicula
 import com.google.gson.Gson
-import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
@@ -32,6 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         buscarCartelera()
         initRecyclerView(listaPeliculas)
+        binding.btnInfo.setOnClickListener { mostrarCreditos() }
+    }
+
+    private fun mostrarCreditos() {
+        Toast.makeText(this, "Hecho con ♥ por DrGomez_21", Toast.LENGTH_LONG).show()
     }
 
     private fun initRecyclerView(peliculas: MutableList<Pelicula>) {

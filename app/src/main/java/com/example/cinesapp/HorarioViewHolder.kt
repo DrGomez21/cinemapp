@@ -13,6 +13,7 @@ class HorarioViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(title: String?, horarioCastellano: String?, horarioSubtitulado: String?) {
         binding.tvNombreCine.text = title ?: "Cine no encontrado"
         binding.bExpandir.setOnClickListener { expandirCard() }
+        binding.cardViewMain.setOnClickListener { expandirCard() }
         binding.tvCastellano.text = horarioCastellano ?: "No hay datos"
         binding.tvSubtitulado.text = horarioSubtitulado ?: "No hay datos"
     }

@@ -99,6 +99,7 @@
             android:src="@drawable/ojo"
             app:layout_constraintStart_toEndOf="@id/tvDuracion"
             app:layout_constraintTop_toTopOf="@+id/tvDuracion"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDuracion"
             android:layout_marginStart="12dp" />
 
         <TextView
