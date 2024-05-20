@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:background="@color/fondo">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvContenedor"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivDetallePoster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="#9470E6"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="TextView"
+                android:layout_marginBottom="18dp"
+                android:textColor="@color/textos"
+                android:textSize="24dp"
+                android:fontFamily="@font/source_sans_pro_bold"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/iconDuracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvContenedor"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDuracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Duracion"
+            android:lines="1"
+            android:textSize="12sp"
+            android:textColor="@color/textos"
+            android:fontFamily="@font/source_sans_pro_regular"
+            app:layout_constraintStart_toEndOf="@id/iconDuracion"
+            app:layout_constraintTop_toTopOf="@+id/iconDuracion"
+            app:layout_constraintBottom_toBottomOf="@id/iconDuracion"/>
+
+        <ImageView
+            android:id="@+id/iconGeneros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pelicula"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconDuracion"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Género"
+            android:textSize="12sp"
+            android:lines="1"
+            android:fontFamily="@font/source_sans_pro_regular"
+            android:textColor="@color/textos"
+            app:layout_constraintStart_toEndOf="@id/iconGeneros"
+            app:layout_constraintTop_toTopOf="@+id/iconGeneros"
+            app:layout_constraintBottom_toBottomOf="@id/iconGeneros"/>
+
+        <ImageView
+            android:id="@+id/iconCalificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ojo"
+            app:layout_constraintStart_toEndOf="@id/tvDuracion"
+            app:layout_constraintTop_toTopOf="@+id/tvDuracion"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:id="@+id/tvCalificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:lines="1"
+            android:textSize="12sp"
+            android:textColor="@color/textos"
+            app:layout_constraintStart_toEndOf="@id/iconCalificacion"
+            app:layout_constraintTop_toTopOf="@+id/iconCalificacion"
+            app:layout_constraintBottom_toBottomOf="@id/iconCalificacion"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTrailer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trailer"
+            app:icon="@drawable/play"
+            app:iconTint="@color/textos"
+            app:iconGravity="textStart"
+            android:backgroundTint="@color/principal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGenero"
+            android:textColor="@color/textos"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvTitleSinopsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:textSize="20sp"
+            android:textColor="@color/textos"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:text="Sinopsis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTrailer" />
+
+        <TextView
+            android:id="@+id/tvSinopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="24dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/source_sans_pro_regular"
+            android:textColor="@color/textos"
+            android:text="Sinopsis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleSinopsis" />
+
+        <TextView
+            android:id="@+id/tvTitleHorarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:textSize="20sp"
+            android:textColor="@color/textos"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:text="Horarios disponibles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSinopsis" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHorarios"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleHorarios" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

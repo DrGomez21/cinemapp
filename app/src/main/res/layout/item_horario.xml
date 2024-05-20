@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:padding="12dp"
+    android:background="#191A1F"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#191A1F">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvNombreCine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del cine"
+                android:textSize="16dp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:layout_weight="1"
+                android:textColor="@color/textos" />
+
+            <ImageButton
+                android:id="@+id/bExpandir"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="end|fill"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/principal"
+                android:fontFamily="sans-serif-medium"
+                android:src="@drawable/calendar"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/llHorariosCastellano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingVertical="16dp"
+            android:foregroundGravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvTituloCastellano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Castellano:"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textSize="16sp"
+                android:textColor="@color/principal"
+                android:layout_marginStart="24dp"/>
+
+            <TextView
+                android:id="@+id/tvCastellano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="14sp"
+                android:textColor="@color/textos"
+                android:fontFamily="@font/source_sans_pro_regular"
+                tools:text="Hello World"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHorariosSubtitulados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp"
+            android:foregroundGravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTituloSubtitulado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Castellano:"
+                android:textSize="16sp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:textColor="@color/principal"
+                android:layout_marginStart="24dp"/>
+
+            <TextView
+                android:id="@+id/tvSubtitulado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/source_sans_pro_regular"
+                android:textColor="@color/textos"
+                android:textSize="14sp"
+                tools:text="Hello World"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
